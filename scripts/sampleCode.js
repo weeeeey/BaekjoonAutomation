@@ -8,9 +8,18 @@ const inputPath =
 
 const inputs = fs.readFileSync(inputPath).toString().trim().split('\n\n');
 
-function solution(input) {
-    console.log(input);
-}
+/**
+ *
+ * @param  input
+ * 입력 값은 개행문자로 구분 됨.
+ * 한 줄에서 n m k 를 입력 받을 경우 const [n,m,k]= input[i].split(" ").map(Number)
+ * 한 줄 모두 받아올 경우 const arr = input[i].split(" ").map(Number)
+ * 입력 값 i줄부터 j줄까지 모두 받아올 땐 const gr = input.slice(i,j).map(s=>s.split(" ").map(Number))
+ * 테스트케이스 입력과 더불어 인덱스로 입력값 받아오기 애매할 땐 shift 연산 사용해도 시간 초과 발생 안함. (100%는 아님)
+ * const arr = input.shift().split(" ").map(Number)
+ *
+ */
+function solution(input) {}
 
 function main() {
     let inputNumber = 1;
