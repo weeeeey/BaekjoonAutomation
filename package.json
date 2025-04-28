@@ -4,7 +4,11 @@
     "main": "index.js",
     "scripts": {
         "init:problem": "node scripts/init.js",
+        "start": "node scripts/start.js",
         "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bin": {
+        "baekjoon": "scripts/cli.js"
     },
     "author": "",
     "license": "ISC",
