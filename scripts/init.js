@@ -3,6 +3,7 @@ const path = require('path');
 const crawling = require('./crawling');
 const makeTextFile = require('./makeTextFile');
 const makeSolutionFile = require('./makeSolutionFile');
+const makeTest = require('./makeTest');
 
 const args = process.argv.slice(2); // -- 뒤 인자
 const folderName = args[0];
@@ -23,7 +24,9 @@ const folderPath = path.join(__dirname, '..', folderName);
 
         // 문제 파일 생성
         makeSolutionFile({
-            problem: folderName,
+            folderPath,
+        });
+        makeTest({
             folderPath,
         });
         makeTextFile({
